@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ODC';
+  title = 'ODC SMS';
+  nom = 'SMS vous allez bien';
+  age = 25 ;
+  ok = false ;
+  desactive = 'desactive';
+  textbtn = 'Activer' ;
+
+  Onclick(): void{
+  this.ok = ! this.ok ;
+  this.textbtn = this.ok ? 'Desactiver' : 'Activer';
+  }
 }
