@@ -18,6 +18,16 @@ import { SeparatorComponent } from './pipes/separator/separator.component';
 import { TimeLeftComponent } from './pipes/time-left/time-left.component';
 import { SumerizePipe } from './pipes/sumerize.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
+import { RouterModule, Routes } from '@angular/router';
+
+const appRoute: Routes = [
+  { path: '', redirectTo: '/biens' , pathMatch: 'full' },
+  { path: 'biens' , component: ListBienComponent },
+  { path: 'biens/add' , component: AddBienComponent },
+  { path: 'biens/:id' , component: DetailBienComponent },
+
+] ;
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +48,7 @@ import { FilterPipe } from './pipes/filter.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule.forRoot(appRoute),
     FormsModule
   ],
   providers: [],

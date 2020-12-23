@@ -9,7 +9,7 @@
       <hr>
       <span class="float-left btn btn-sm btn-outline-danger disabled">{{bien.price | separateur:'.' }} Fcfa</span>
       <span class="btn btn-sm">{{bien.createAt | timeleft}}</span>
-      <a href="#" class="btn btn-sm btn-primary float-right">Reserver</a>
+      <a [routerLink]="['/biens/',bien.id]" class="btn btn-sm btn-primary float-right">Details</a>
     </div>
   </div>
   

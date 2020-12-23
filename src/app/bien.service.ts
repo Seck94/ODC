@@ -5,18 +5,20 @@ import { Bien } from './bien/bien.modele';
   providedIn: 'root'
 })
 export class BienService {
+
+   seach: string = '' ;
   private biens: Bien [] = [
     {id: 1, title: 'maison',
     description: 'desc',
     price: 4000,
-    image: 'https://source.unsplash.com/1080x720/?home ',
+    image: 'https://source.unsplash.com/1080x720/?chambre ',
     categoriy: 'Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès quil est prêt ou que la mise en page est achevée. Généralement, on utilise un texte en faux latin, le Lorem ipsum ou Lipsum.', sale: true,
-    createAt: new Date(2000 , 10 , 12)
+    createAt: new Date(2020 , 12 , 23)
     },
     {id: 2, title: 'ordinateur',
     description: 'desc',
     price: 4000,
-    image: 'https://source.unsplash.com/1080x720/?computer',
+    image: 'https://source.unsplash.com/1080x720/?hp',
     categoriy: 'Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès quil est prêt ou que la mise en page est achevée. Généralement, on utilise un texte en faux latin, le Lorem ipsum ou Lipsum.', sale: true,
     createAt: new Date(2000 , 10 , 12)
     },
@@ -27,24 +29,24 @@ export class BienService {
     categoriy: 'Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès quil est prêt ou que la mise en page est achevée. Généralement, on utilise un texte en faux latin, le Lorem ipsum ou Lipsum.', sale: true,
     createAt: new Date(2000 , 10 , 12)
     },
-    {id: 4, title: 'Jeux',
+    {id: 4, title: 'food',
     description: 'desc',
     price: 4000,
-    image: 'https://source.unsplash.com/1080x720/?jeux',
+    image: 'https://source.unsplash.com/1080x720/?resaurant',
     categoriy: 'Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès quil est prêt ou que la mise en page est achevée. Généralement, on utilise un texte en faux latin, le Lorem ipsum ou Lipsum.', sale: true,
     createAt: new Date(2020 , 10 , 30)
     },
-    {id: 5, title: 'beaute',
+    {id: 5, title: 'voiture',
     description: 'desc',
     price: 4000,
-    image: 'https://source.unsplash.com/1080x720/?beaute',
+    image: 'https://source.unsplash.com/1080x720/?bmw',
     categoriy: 'Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès quil est prêt ou que la mise en page est achevée. Généralement, on utilise un texte en faux latin, le Lorem ipsum ou Lipsum.', sale: true,
     createAt: new Date(2015 , 1 , 12)
     },
     {id: 6, title: 'appel',
     description: 'desc',
     price: 4000,
-    image: 'https://source.unsplash.com/1080x720/?phone',
+    image: 'https://source.unsplash.com/1080x720/?Iphone',
     categoriy: 'Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès quil est prêt ou que la mise en page est achevée. Généralement, on utilise un texte en faux latin, le Lorem ipsum ou Lipsum.', sale: true,
     createAt: new Date(2019 , 4 , 12)
     },
