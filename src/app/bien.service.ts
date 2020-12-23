@@ -85,4 +85,8 @@ export class BienService {
       return this.biens[this.biens.length - 1] ? this.biens[this.biens.length - 1 ].id : 0 ;
     }
 
+    // getSimilarBiensById(id: number):Bien[]{
+    //   this.biens.
+    // }
+
 }

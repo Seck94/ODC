@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 import { BienService } from 'src/app/bien.service';
 import { Bien } from '../bien.modele';
 
@@ -15,6 +15,13 @@ export class DetailBienComponent implements OnInit {
 
   ngOnInit(): void {
     this.bien =  this.bienSERV.getBienById(+this.activeR.snapshot.params.id);
+    this.activeR.params.subscribe(
+      (params: Params) => {
+
+    this.bien =  this.bienSERV.getBienById(+this.activeR.snapshot.params.id);
+
+      }
+    );
   }
 
 }

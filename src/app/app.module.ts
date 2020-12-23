@@ -19,14 +19,11 @@ import { TimeLeftComponent } from './pipes/time-left/time-left.component';
 import { SumerizePipe } from './pipes/sumerize.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
 import { RouterModule, Routes } from '@angular/router';
+import { ReservationBienComponent } from './bien/reservation-bien/reservation-bien.component';
+import { EditReservationsComponent } from './bien/edit-reservations/edit-reservations.component';
+import { DetailReservationsComponent } from './bien/detail-reservations/detail-reservations.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
-const appRoute: Routes = [
-  { path: '', redirectTo: '/biens' , pathMatch: 'full' },
-  { path: 'biens' , component: ListBienComponent },
-  { path: 'biens/add' , component: AddBienComponent },
-  { path: 'biens/:id' , component: DetailBienComponent },
-
-] ;
 
 @NgModule({
   declarations: [
@@ -43,12 +40,15 @@ const appRoute: Routes = [
     SeparatorComponent,
     TimeLeftComponent,
     SumerizePipe,
-    FilterPipe
+    FilterPipe,
+    ReservationBienComponent,
+    EditReservationsComponent,
+    DetailReservationsComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoute),
     FormsModule
   ],
   providers: [],
